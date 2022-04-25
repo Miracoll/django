@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+{% block content%}
+    <div class="w3-border w3-section w3-container w3-center">
+        <div class="row">
+            <div class="col-12">
+                <img src="{{ posts.author.profile.image.url }}" alt="{{ posts.author.first_name }} photo" width="200" height="200" class="rounded-circle mt-3">
+            </div>
+        </div>
+        <div>
+            <div class="col-12">
+                <div><span class="w3-text-blue w3-large"> {{ posts.author }} </span> <span class="w3-small">{{ posts.date | date:"F d, Y" }}</span></div>
+                <div class="w3-border-top"><h1 class="w3-xlarge">{{ posts.title }}</h1></div>
+                <div><p>{{ posts.content }}</p></div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
